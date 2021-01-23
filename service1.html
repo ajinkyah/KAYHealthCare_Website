@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+function openWin() {
+    window.open("bmi.html");
+}
+</script>
+<style>
+    #bmi{
+        margin:10px;
+        padding: 10px;
+        border: 2px solid black;
+        width: 150px;
+        height: 50px;
+        transition: width 1s;
+        transition-timing-function: linear;
+        
+    }
+    #bmi:hover{
+        background-color: aqua;
+        width: 300px;
+        
+    }
+    
+    
+#img{
+		transition: width 1s; 
+}
+
+#img:hover{
+	width:600px;
+}
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: aqua;
+    }
+</style>
+    <meta charset="UTF-8">
+	<title> KAY Health Care </title>
+	
+	<link href="css/style1.css" type="text/css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+</head>
+<body>
+	
+	<div class="top">
+		<div>
+		 Contact Us 022 2172 5555 | kayhealthcare@gmail.com 
+		</div>
+	</div>
+	
+	<div class="logo">
+		<div>
+			<table>
+				<tr>
+					<td width="550px" style="font-size:50px;font-family:forte;"> <font color="#428bca"> KAY  </font><font color="#000"> Health Care</font> </td>
+					<td > <br>
+						<font size="4px"> 
+							<a href="index.html">HOME</a> 
+							<a href="about.html">ABOUT US</a>  
+							<a href="service.html">SERVICE</a>
+							<a href="doctor.html">DOCTORS</a> 
+							<a href="contact.html">CONTACT US</a>
+                            <a href="appointment2.html">APPOINTMENT</a>
+						</font>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	
+	
+	
+	<div class="bottom">
+		<div>
+			<table border="0">
+				<tr>
+					<td width="700px">
+						<font color="#000"> OUR OUTSTANDING SERVICES</font> <br> <br>
+
+					<font color="#000" size="6px"> What We Offer! </font> <br> <br>
+
+					
+					<ul>
+					<li> General Medicines 
+					<li> Basic First Aid
+					<li> Precautions to take During Respective Seasons     
+					<li> Brain Disease Symptoms
+					<li> Heart Disease Symptons
+					<li> Exercise for Back Pain
+                    <li> Exercise for Neck Pain
+                    <li> Body Mass Index<br>
+                    <form>
+                      <input type="button" value="calculate BMI" onclick="openWin()" id="bmi">
+                    </form>
+					
+					</ul>
+ <br><br>
+
+<br>
+ </td>
+					
+					
+					<td style="padding-left:20px;"> <img id="img" src="img/01.jpg" width="400px"></td>
+				</tr>
+			
+				
+			</table>
+		</div>
+	</div>
+	<div>
+	    <font color="light-blue" size="6px"> Some Recommended Health Videos</font> <br> <br>
+		<video controls width="32%" height="315">
+  <source src="vid1.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video>
+  
+		<iframe width="32%" height="315" src="https://www.youtube.com/embed/0aNNYEUARAk?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		<iframe width="32%" height="315" src="https://www.youtube.com/embed/QHzt-z_2jEY?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</div>
+	<div class="bottom">
+
+		<div>
+			<table border="0">
+				<tr>
+					<td width="700px" id="demo"> 
+						<font color="#000">------------ </font> <br> <br>
+
+					<font color="#000" size="6px"> General Medicines and When to use them </font> <br> <br>
+                    <button type="button" onclick="loadDoc()">Click to know more</button><br>
+				    <button type="button" onclick="loadDoc1()">Click to know more</button><br>
+					 <button type="button" onclick="loadDoc2()">Click to know more</button><br>
+					 <button type="button" onclick="loadDoc3()">Click to know more</button><br>
+					<button type="button" onclick="loadDoc4()">Click to know more</button><br>
+				   <script>
+                           function loadDoc() {
+                           var xhttp = new XMLHttpRequest();
+                           xhttp.onreadystatechange = function() {
+                           if (this.readyState == 4 && this.status == 200) 
+						           {
+                                    document.getElementById("demo").innerHTML =  this.responseText;
+                                    }
+                            };
+                        xhttp.open("GET", "medicines/med1.txt", true);
+                         xhttp.send();
+                       }
+					   function loadDoc1() {
+                           var xhttp = new XMLHttpRequest();
+                           xhttp.onreadystatechange = function() {
+                           if (this.readyState == 4 && this.status == 200) 
+						           {
+                                    document.getElementById("demo").innerHTML =  this.responseText;
+                                    }
+                            };
+                        xhttp.open("GET", "medicines/med2.txt", true);
+                         xhttp.send();
+                       }
+					     function loadDoc2() {
+                           var xhttp = new XMLHttpRequest();
+                           xhttp.onreadystatechange = function() {
+                           if (this.readyState == 4 && this.status == 200) 
+						           {
+                                    document.getElementById("demo").innerHTML =  this.responseText;
+                                    }
+                            };
+                        xhttp.open("GET", "medicines/med3.txt", true);
+                         xhttp.send();
+                       }
+					     function loadDoc3() {
+                           var xhttp = new XMLHttpRequest();
+                           xhttp.onreadystatechange = function() {
+                           if (this.readyState == 4 && this.status == 200) 
+						           {
+                                    document.getElementById("demo").innerHTML =  this.responseText;
+                                    }
+                            };
+                        xhttp.open("GET", "medicines/med4.txt", true);
+                         xhttp.send();
+                       }
+					     function loadDoc4() {
+                           var xhttp = new XMLHttpRequest();
+                           xhttp.onreadystatechange = function() {
+                           if (this.readyState == 4 && this.status == 200) 
+						           {
+                                    document.getElementById("demo").innerHTML =  this.responseText;
+                                    }
+                            };
+                        xhttp.open("GET", "medicines/med5.txt", true);
+                         xhttp.send();
+                       }
+                   </script>
+<br>
+ </td>
+					
+					
+					<td style="padding-left:20px;"> </td>
+				</tr>
+                                
+							
+			</table>
+            
+		</div>
+	</div>
+    </body>
+</html>
+	

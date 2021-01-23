@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Appointment</title>
+   <style>
+   button{
+   height:100px;
+   width:300px;
+   	font-size:24px;
+	border-radius:10px;
+   }
+   button:hover{
+   	background-color:lightgreen;
+   }
+   
+   input{
+   	height:40px;
+	width:300px;
+    border-radius:10px;
+   }
+   
+   input:hover{
+   	background-color:lightyellow;
+
+   }
+   
+   </style>
+
+<body>
+<div class="bottom_up">
+		<div>
+				<h1 align="center">Make an Appointment</h1>
+				
+				<table>
+				<form name="f1" method="post" action="formsuccess.html" onsubmit="return validate()">
+										
+					<tr>
+						<td width="500px"> </td>
+						<td colspan="2"><font size="3px">FIRST NAME:</font>
+						<input type="text" placeholder="First Name" name="FN"
+						<span id="fnameloc" style="color:red"></span>
+					</tr>
+					<tr height="30px">
+						
+					</tr>
+					<tr>
+					   <td width="500px"> </td>
+					   <td colspan="2"><font size="3px">LAST NAME:</font>
+						<input type="text" placeholder="Last Name" name="LN">
+						<span id="lnameloc" style="color:red"></span><br>
+					</tr>
+					<tr height="30px">
+						
+					</tr>
+					<tr>
+						<td width="500px"> </td>
+						<td colspan="2"><font size="3px">EMAIL:</font>
+						<input type="email" placeholder="Email Id" name="EM" size="38">
+						<span id="emailloc" style="color:red"></span>
+					</tr>
+					<tr height="30px">
+						
+					</tr>	
+					<tr>
+					   <td width="500px"> </td>
+					   <td colspan="2"><font size="3px">MOBILE NUMBER:</font>
+					   <input type="number" placeholder="Mobile No" name="MN" size="38">
+						<span id="mobileloc" style="color:red"></span>
+					</tr>
+					
+					<tr height="30px">
+						
+					</tr>
+					<tr>
+						<td width="500px"> </td>
+						<td colspan="2"><font size="3px">SEX:</font>
+						<select name="select"> <option value="-1"> -- Sex -- </option> <option value="1"> Male </option> <option value="2"> Female </option> </select>
+						<span id="sloc" style="color:red"></span>
+					</tr>
+					<tr height="30px">
+						
+					</tr>
+					<tr>	
+					  <td width="500px"> </td>
+						<td colspan="2"><font size="3px">APPOINTMENT DATE:</font>
+						<input type="date" placeholder="appointment date" name="AD">
+						<span id="apploc" style="color:red"></span>
+					</tr>
+					
+						<tr height="30px">
+						
+					</tr>
+
+                        
+					</tr>
+					
+						<tr height="30px">
+						
+					</tr>
+					<tr>
+						<td width="500px"> </td>
+						<td colspan="2">	<button> SUBMIT </button>
+					</tr>
+				 </form>
+				 </table>
+                    
+				
+
+
+
+</body>
+</html>

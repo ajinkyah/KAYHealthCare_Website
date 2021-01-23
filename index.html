@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+  <style>
+  body{
+background: #FFEEEE;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #DDEFBB, #FFEEEE);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #DDEFBB, #FFEEEE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+  #kay{
+  	animation:blinkingText 6s infinite;
+  }
+  
+  #aaa{
+  	color:	white;
+  }
+   #aaa:hover{
+  	color:	black;
+  }
+  
+  @keyframes blinkingText{
+  0%{     color: #000;    }
+    20%{    color: blue; }
+    40%{    color: green; }
+    60%{    color:aqua;  }
+    80%{   color: yellow;    }
+	100%{color:#000;}
+	}
+  input[type=number]{
+    width: 270px;
+} 
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+	#imgg {  
+    background: url('z.jpg') no-repeat;
+	background-size: cover;
+	background-clip: border-box;
+    background-size: 100%;
+}
+
+  </style>
+  
+    <meta charset="UTF-8">
+	<title> KAY  Your Personal Health Care Website </title>
+	
+	<link href="css/style1.css" type="text/css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="footer, address, phone, icons" />
+
+	<title>Footer With Address And Phones</title>
+
+	<link rel="stylesheet" href="css/demo.css">
+	<link rel="stylesheet" href="css/footer-distributed-with-address-and-phones.css">
+	
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+</head>
+<body >
+	<div class="top">
+		<div>
+		 Contact Us 022 2172 5555 | kayhealth@gmail.com  |
+		<font size="4px"> <a href="doclogin.html"  id="aaa"> Doctor Login</a> </font>
+		</div>
+	</div>
+	
+	<div class="logo">
+		<div>
+			<table>
+			
+				<tr>
+					<td width="600px" style="font-size:50px;font-family:forte;"> <font color="#428bca" id="kay"> KAY  </font><font color="#000"> Health Care</font> </td>
+					<td> <br> <br>
+						<font size="4px"> 
+							<a href="index.html">HOME</a> 
+							<a href="about.html">ABOUT US</a>  
+							<a href="service.html">SERVICE</a>
+							<a href="doctor.html">DOCTOR</a> 
+							<a href="contact.html">CONTACT US</a>
+							<a href="appointment2.html">APPOINTMENT</a>
+						</font>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	
+	<div class="middle">
+		 <div id="imgg" class="mySlides w3-animate-fading"style="background:url('img/a.jpg') no-repeat; background-size: 100%;"> </div>
+		 <div class="mySlides w3-animate-fading"style="background:url('img/x.png') no-repeat; background-size: 100%;"> </div>
+		 <div class="mySlides w3-animate-fading"style="background:url('img/y.jpg') no-repeat; background-size: 100%;"> </div>
+		 <div id="imggg"class="mySlides w3-animate-fading"style="background:url('img/z.jpg') no-repeat; background-size: 100%;"> </div>
+	</div>
+	
+	<div class="bottom">
+		<div>
+			<table border="0">
+				<tr>
+					<td width="700px">
+						<font color="#000"> We are medical center </font> <br> <br>
+
+					<font color="#000" size="5px"> We Have Medicare Plan Options for You! </font> <br> <br>
+                        
+"Healthy living" to most people means both physical and mental health are in balance or functioning well together in a person. In many instances, physical and mental health are closely linked, so that a change (good or bad) in one directly affects the other. Consequently, some of the tips will include suggestions for emotional and mental "healthy living." <br><br>
+
+Regular exercise can help increase self-esteem and self-confidence, decrease stress and anxiety, enhance mood, and improve general mental health.
+
+ <br><br>
+<ul>
+<font color="lime" size="5px">Here are some tips:-</font> <br><br>
+<ul>
+<li> Eat three meals a day (breakfast, lunch, and dinner); it is important to remember that dinner does not have to be the largest meal.
+<li>The bulk of food consumption should consist of fruits, vegetables, whole grains, and fat-free or low-fat milk products.
+</ul>
+<br>
+    <td> </td>
+			
+				
+			</table>
+		</div>
+	</div>
+	
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 3000);    
+}
+</script>
+            
+				
+		</div>
+	</div>
+	
+    </body>
+</html>
+	

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>BMI</title>
+    <style>
+
+    body {
+        background: #FFEEEE;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #DDEFBB, #FFEEEE);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #DDEFBB, #FFEEEE);
+    }
+
+    button{
+        border: none;
+        background: none;
+        text-transform: uppercase;
+        height: 100%;
+        font-weight: 700;
+        color: steelblue;
+        letter-spacing: 1px;
+        font-size: inherit;
+        transition: all 0.4s;
+        outline: 1.5px solid;
+        padding: 10px;
+    }
+    button:hover{
+        color: white;
+        background: steelblue;
+    }
+    input{
+        font-size: 18px;
+        background: #f7f7f7;
+        width: 100%;
+        color: #2980b9;
+        margin: 10px;
+        padding: 7px;
+        box-sizing: border-box;
+        border: 3px solid rgba(0, 0, 0, 0);
+    }
+    input:focus{
+        background: white;
+        border: 3px solid steelblue;
+        outline: none;
+    }
+    .chart{
+        font-size: 18px;
+        width: 100%;
+        color: #000;
+        margin: 10px;
+        padding: 7px;
+        box-sizing: border-box;
+        border: 3px solid rgba(0, 0, 0, 0);
+    }
+    </style>
+</head>
+<body class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Calculate your BMI</h3>
+            <div class="row">
+                <div class="col-md-5">
+                    <h4>Weight</h4>
+                </div>
+                <div class="col-md-7">
+                    <input type=text value="" id="weight" placeholder="eg:-70KG"></input>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <h4>Height</h4>
+                </div>
+                <div class="col-md-7">
+                    <input type=text value="" id="height" placeholder="eg:-1.8m"></input>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <button id="calculate" onclick="compute()">Calculate</button>
+                </div>
+                <div class="col-md-7">
+                    <input type=text value="" id="answer"></input>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="chart">
+                <marquee><h3>BMI Chart</h3></marquee>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Weight(Kgs)</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Below 18.5</td>
+                            <td>Underweight</td>
+                        </tr>
+                        <tr>
+                            <td>18.5 to 25</td>
+                            <td>Normal</td>
+                        </tr>
+                        <tr>
+                            <td>25 to 40</td>
+                            <td>Overweight</td>
+                        </tr>
+                        <tr>
+                            <td>Above 40</td>
+                            <td>Obese</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+function compute()
+{
+
+    var height=Number(document.getElementById("height").value);
+    var weight=Number(document.getElementById("weight").value);
+    var BMI=weight/Math.pow(height,2);
+    document.getElementById("answer").value=BMI
+    
+    if(BMI<18.5)
+    {
+        alert("Underweight");
+    }
+    else if(BMI>=18.5&&BMI<=25)
+    {
+        alert("Normal");
+    }
+    else if(BMI>25&&BMI<=40)
+    {
+        alert("Overweight");
+    }
+    else if(BMI>40)
+    {
+        alert("Obese");
+    }
+}
+</script>
+</html>
